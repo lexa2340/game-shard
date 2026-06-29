@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4lg3ybwm3hfo"]
+
+[ext_resource type="Script" path="res://skripts/Arrow.cs" id="1_nhvvn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtglo"]
+size = Vector2(70, 70)
+
+[node name="Node2D" type="Area2D"]
+script = ExtResource("1_nhvvn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(45, 42)
+shape = SubResource("RectangleShape2D_dtglo")

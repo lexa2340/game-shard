@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://b04h3qs5gf75h"]
+
+[ext_resource type="Script" path="res://skripts/LevelBase.cs" id="1_r05ui"]
+[ext_resource type="PackedScene" uid="uid://circ0wxnitcov" path="res://scense/Player.tscn" id="4_jiy0c"]
+[ext_resource type="Script" path="res://skripts/ArrowSpawner.cs" id="5_jwkll"]
+[ext_resource type="PackedScene" uid="uid://d4lg3ybwm3hfo" path="res://scense/Arrow.tscn" id="6_5wp68"]
+[ext_resource type="Script" path="res://skripts/HUD.cs" id="7_1owlv"]
+
+[node name="Node2D" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_r05ui")
+
+[node name="BGVideo" type="VideoStreamPlayer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+bus = &"Music"
+
+[node name="Player" parent="." instance=ExtResource("4_jiy0c")]
+
+[node name="ArrowSpawner" type="Node2D" parent="."]
+script = ExtResource("5_jwkll")
+ArrowScene = ExtResource("6_5wp68")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("7_1owlv")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Node" type="Node" parent="."]

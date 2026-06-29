@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://db8fp7c3tceds"]
+
+[ext_resource type="Script" path="res://skripts/Menu.cs" id="1_21yx4"]
+[ext_resource type="FontFile" uid="uid://d1q63uebg0rk2" path="res://front/Regez-Regular.otf" id="1_b1h60"]
+[ext_resource type="PackedScene" uid="uid://jqoywnx0c1te" path="res://scense/test.tscn" id="2_yni7r"]
+[ext_resource type="Script" path="res://skripts/background_menu.cs" id="3_ayia3"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_21yx4")
+
+[node name="Node2D" parent="." instance=ExtResource("2_yni7r")]
+script = ExtResource("3_ayia3")
+
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 502.0
+offset_top = 308.0
+offset_right = 729.0
+offset_bottom = 365.0
+theme_override_fonts/font = ExtResource("1_b1h60")
+theme_override_font_sizes/font_size = 64
+text = "игра"
+autowrap_mode = 1
+icon_alignment = 1
+
+[node name="SettingsButton" type="Button" parent="."]
+offset_left = 502.0
+offset_top = 242.0
+offset_right = 731.0
+offset_bottom = 299.0
+theme_override_fonts/font = ExtResource("1_b1h60")
+theme_override_font_sizes/font_size = 64
+text = "настройки"
+
+[node name="LevelSelectButton" type="Button" parent="."]
+offset_left = 495.0
+offset_top = 516.0
+offset_right = 722.0
+offset_bottom = 573.0
+theme_override_fonts/font = ExtResource("1_b1h60")
+theme_override_font_sizes/font_size = 64
+text = "выбор   уровня"
+
+[node name="ExitButton" type="Button" parent="."]
+offset_left = 494.0
+offset_top = 577.0
+offset_right = 721.0
+offset_bottom = 634.0
+theme_override_fonts/font = ExtResource("1_b1h60")
+theme_override_font_sizes/font_size = 64
+text = "выход"

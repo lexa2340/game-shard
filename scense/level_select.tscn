@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cumjlc1p8hnkw"]
+
+[ext_resource type="Script" path="res://skripts/LevelSelect.cs" id="1_thy16"]
+[ext_resource type="FontFile" uid="uid://d1q63uebg0rk2" path="res://front/Regez-Regular.otf" id="2_12j4h"]
+[ext_resource type="Script" path="res://skripts/background_menu.cs" id="3_6phnr"]
+[ext_resource type="PackedScene" uid="uid://jqoywnx0c1te" path="res://scense/test.tscn" id="3_12j4h"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_thy16")
+
+[node name="Node2D" parent="." instance=ExtResource("3_12j4h")]
+script = ExtResource("3_6phnr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 1152.0
+offset_bottom = 648.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_12j4h")
+theme_override_font_sizes/font_size = 64
+text = "Выбор уровня"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_12j4h")
+theme_override_font_sizes/font_size = 64
+text = "Назад   в   меню"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2

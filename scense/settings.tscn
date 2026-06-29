@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct5xbp5pirb6u"]
+
+[ext_resource type="PackedScene" uid="uid://jqoywnx0c1te" path="res://scense/test.tscn" id="1_r4f0y"]
+[ext_resource type="Script" path="res://skripts/Settings.cs" id="2_n7ccr"]
+[ext_resource type="FontFile" uid="uid://d1q63uebg0rk2" path="res://front/Regez-Regular.otf" id="2_vk71f"]
+[ext_resource type="Script" path="res://skripts/background_menu.cs" id="3_6uuij"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("2_n7ccr")
+
+[node name="Node2D2" parent="." instance=ExtResource("1_r4f0y")]
+script = ExtResource("3_6uuij")
+
+[node name="Node2D" parent="." instance=ExtResource("1_r4f0y")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+offset_right = 1152.0
+offset_bottom = 648.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vk71f")
+theme_override_font_sizes/font_size = 64
+text = "Настройки"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vk71f")
+theme_override_font_sizes/font_size = 64
+text = "громкость    музыки"
+
+[node name="MusicSlider" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+value = 80.0
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vk71f")
+theme_override_font_sizes/font_size = 64
+text = "громкость    эфектов"
+
+[node name="SFXSlider" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+value = 100.0
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vk71f")
+theme_override_font_sizes/font_size = 64
+text = "в    меню"
