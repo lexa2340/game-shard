@@ -62,6 +62,6 @@
 
 ## Ссылки
 
-* Ссылка на страницу игры на Itch.io: []
+* Ссылка на страницу игры на Itch.io: [https://lexa3310.itch.io/shard-game]
 * Лицензия проекта: MIT License
 
