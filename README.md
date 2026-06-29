@@ -65,9 +65,9 @@
 * Ссылка на страницу игры на Itch.io: [https://lexa3310.itch.io/shard-game]
 * кастомные уровни 
 
-https://lexa2340.github.io/shard-levels/
+* https://lexa2340.github.io/shard-levels/
 
-добавить уровни писать в личку ​дс .lexa234
+* добавить уровни писать в личку ​дс .lexa234
 
 * Лицензия проекта: MIT License
 
