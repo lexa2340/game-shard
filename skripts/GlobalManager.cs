@@ -29,18 +29,25 @@ public partial class GlobalManager : Node
 		LevelIcons.Clear();
 
 		string levelsDir = Path.Combine(ProjectSettings.GlobalizePath("user://"), "levels");
+		GD.Print("Ищу уровни в: " + levelsDir);
+		GD.Print("Папка существует: " + Directory.Exists(levelsDir));
 
 		if (!Directory.Exists(levelsDir))
 		{
 			Directory.CreateDirectory(levelsDir);
+			GD.Print("Папка levels создана.");
 			return;
 		}
 
 		string[] subDirs = Directory.GetDirectories(levelsDir);
+		GD.Print("Найдено папок: " + subDirs.Length);
+
 		foreach (string dir in subDirs)
 		{
+			GD.Print("  Папка: " + dir);
 			string levelName = Path.GetFileName(dir);
 			string configPath = Path.Combine(dir, "level.cs");
+			GD.Print("  level.cs существует: " + File.Exists(configPath));
 
 			if (File.Exists(configPath))
 			{
@@ -75,3 +82,4 @@ public partial class GlobalManager : Node
 		Misses = 0;
 	}
 }
+
